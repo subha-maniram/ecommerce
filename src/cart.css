@@ -1,0 +1,35 @@
+.card1 {
+    border: none !important;
+    box-shadow: 15px 20px 20px rgba(96, 93, 93, 0.3),
+        inset 4px 4px 10px white;
+    border-radius: 20px !important;
+    overflow: hidden;
+
+    transition: .2s;
+    height: 200px;
+    width: 300px
+}
+
+.Checkout {
+    width: 320px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+
+
+
+.Checkout h6,
+h4 {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.login-box p {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
