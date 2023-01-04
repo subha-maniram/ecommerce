@@ -20,14 +20,14 @@ const Cart = () => {
 
       <section className="mt-2">
         <Container>
-          <Row className='d-flex flex-row justify-content-center align-item-center'>
+          <Row className='d-flex flex-row justify-content-center align-item-center mx-3'>
             <Col lg='9' md='9'>
               {cartItems.length === 0 ?
                 (<div className='d-flex flex-column justify-content-center'> 
                        
                   <h2 className='fs-4 text-center'>No items added in cart</h2>
                   <div className='text-center'>
-                  <img src="https://www.maafashion.co.in/Skins/site-default/img/empty-cart.gif" height="200"  width="200" alt="cart"/>
+                  <img src="https://www.maafashion.co.in/Skins/site-default/img/empty-cart.gif" height="180"  width="200" alt="cart"/>
                   </div>
                   <div className='text-center'>
                   <button className='btn btn-primary btn-sm text-center'><Link style={{ textDecoration: 'none' , color:'#ffffff'}} to="/product">Continue Shopping</Link></button>
@@ -57,13 +57,21 @@ const Cart = () => {
 
 
             </Col>
-            <Col lg="3" md="3">
+            <Col lg="3" md="3" >
 
-              <div className="Checkout">
-                <h6>Total Qty:<span>{cartItems.length}</span></h6>
-                <h6>SubTotal:<span>${SubTotal}</span></h6>
-                <h6>Free Shipping <span>$0</span></h6>
-                <h4>Total<span>${SubTotal}</span></h4>
+              <div className="Checkout  mt-3">
+                <div className='d-flex justify-content-between'>
+                <h4>Total Qty :</h4>
+                <h6>{cartItems.length}</h6>
+                </div>
+                <div className='d-flex justify-content-between'>
+                <h4>SubTotal :</h4>
+                <h6>${SubTotal}</h6>
+                </div>
+                <div className='d-flex justify-content-between'>
+                <h4>Total :</h4>
+                <h6>${SubTotal}</h6>
+                </div>
                 <button className='btn btn-primary btn-sm w-100 mt-2'>Checkout</button>
               </div>
             </Col>
