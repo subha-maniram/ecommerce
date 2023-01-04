@@ -1,11 +1,12 @@
-
-
 .Checkout {
     width: 320px;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgb(2,0,36);
+     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(223,223,228,1) 0%,
+      rgba(70,175,215,1) 81%, rgba(0,212,255,1) 100%);
     color: #fff;
     box-sizing: border-box;
-    padding: 70px 30px;
+    padding: 25px 30px;
+    border-radius: 5px;
 }
 
 
@@ -16,6 +17,9 @@ h4 {
     padding: 0 0 20px;
     text-align: center;
     font-size: 22px;
+}
+.Checkout h4{
+    color:rgb(83, 55, 55);
 }
 
 .login-box p {
