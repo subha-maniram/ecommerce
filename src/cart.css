@@ -1,14 +1,4 @@
-.card1 {
-    border: none !important;
-    box-shadow: 15px 20px 20px rgba(96, 93, 93, 0.3),
-        inset 4px 4px 10px white;
-    border-radius: 20px !important;
-    overflow: hidden;
 
-    transition: .2s;
-    height: 200px;
-    width: 300px
-}
 
 .Checkout {
     width: 320px;

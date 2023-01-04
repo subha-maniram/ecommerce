@@ -19,19 +19,31 @@ export default function Product({data}) {
    console.log(filter);
 
     const ShowProducts = () => {
+
+const handleSearch = (e)=> {
+    const search = e.target.value
+    console.log(search);
+    
+    const word = data.filter((item)=>item.title.toLowerCase().includes(search.toLowerCase()));
+    setFilter(word)
+}
+
+
         return (
             <>
-                <div className='buttons d-flex justify-content-center mb-3 pb-5'>
-                    <motion.button whileHover={{scale:1.2}} className='btn btn-outline-dark me-2' 
+                <div className='buttons d-flex flex-wrap justify-content-start mb-3 pb-5'>
+                    <motion.button whileHover={{scale:1.2}} className='btn btn-outline-dark me-2 mb-2' 
                     onClick={()=>setFilter(data)}>All</motion.button>
-                    <motion.button whileHover={{scale:1.2}} className='btn btn-outline-dark me-2' 
+                    <motion.button whileHover={{scale:1.2}} className='btn btn-outline-dark me-2 mb-2' 
                     onClick={()=>filterproduct("men's clothing")}>Men's Clothing</motion.button>
-                    <motion.button whileHover={{scale:1.2}} className='btn btn-outline-dark me-2' 
+                    <motion.button whileHover={{scale:1.2}} className='btn btn-outline-dark me-2 mb-2' 
                     onClick={()=>filterproduct("women's clothing")}>Women's Clothing</motion.button>
-                    <motion.button whileHover={{scale:1.2}} className='btn btn-outline-dark me-2' 
+                    <motion.button whileHover={{scale:1.2}} className='btn btn-outline-dark me-2 mb-2' 
                     onClick={()=>filterproduct("jewelery")}>Jewelery</motion.button>
-                    <motion.button whileHover={{scale:1.2}} className='btn btn-outline-dark me-2' 
+                    <motion.button whileHover={{scale:1.2}} className='btn btn-outline-dark me-2 mb-2' 
                     onClick={()=>filterproduct("electronics")}>Electronic</motion.button>
+
+                    <input type="text"  placeholder='Search Products' onChange={handleSearch}/>
                 </div>
                 {filter.map((product) => {
                     return (

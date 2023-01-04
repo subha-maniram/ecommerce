@@ -1,11 +1,15 @@
 import React from "react"
 import { Link } from 'react-router-dom';
+import Meta from './Meta';
+
+
 
 
 
 
 const Footer = () => {
     return (
+        <Meta title="contact" >
         <>
         {/* footer top content */}
             <div class="container-fluid bg-primary">
@@ -47,27 +51,27 @@ const Footer = () => {
                 <div className="container bg-dark">
                     <div className="row py-4 text-white">
                         <div className="col-md-3 col-sm-12">
-                            <h4 className="text-warning">Company Name</h4>
+                            <h4 className="text-warning text-start">Lee Collection</h4>
                             <p>In this section we should write about our company
                                 to introduce your company or something else.
                             </p>
                         </div>
                         <div className="col-md-3 col-sm-12 ">
-                            <h4 className="text-warning">Services</h4>
+                            <h4 className="text-warning text-start">Services</h4>
                             <p>About</p>
                             <p>Return Policy</p>
                             <p>Term & Condition</p>
                             <p>Custom serv</p>
                         </div>
                         <div className="col-md-3 col-sm-12 ">
-                            <h4 className="text-warning">Useful Links</h4>
+                            <h4 className="text-warning text-start">Useful Links</h4>
                             <p>  <Link to="/home" style={{textDecoration: 'none'}}>Home</Link></p>
                             <p>  <Link to="/product" style={{textDecoration: 'none'}}>Product</Link></p>
                             <p>  <Link to="/home" style={{textDecoration: 'none'}}>About</Link></p>
                             <p>  <Link to="/home" style={{textDecoration: 'none'}}>Contact Us</Link></p>
                         </div>
                         <div className="col-md-3 col-sm-12">
-                            <h4 className="text-warning">Address</h4>
+                            <h4 className="text-warning text-start">Address</h4>
                             <div >
                                 <i class="fa fa-home me-2 "></i>
                                 <span>Kabul</span>
@@ -102,6 +106,7 @@ const Footer = () => {
                 </div>
             </div>
         </>
+        </Meta>
     )
 }
 

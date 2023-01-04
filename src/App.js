@@ -5,11 +5,13 @@ import Product from './component/product';
 import Products from './component/products';
 import Footer from './component/footer';
 import Cart from './component/cart';
-// import Login from './component/login';
+import About from './component/about';
 import {Nav, Navbar, Container, Button } from 'react-bootstrap';
-import {BrowserRouter,HashRouter ,Routes ,Route,Link} from 'react-router-dom';
+import {HashRouter ,Routes ,Route,Link} from 'react-router-dom';
 import {  useSelector } from 'react-redux';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import Login from './component/login';
+import Register from './component/register';
 
  
 
@@ -36,7 +38,7 @@ useEffect(() => {
   
 
   return (
-    <BrowserRouter>
+   
     <HashRouter basename='/'>
     <div>
     <>
@@ -57,7 +59,7 @@ useEffect(() => {
                     <Nav className="me-auto" >
                         <Nav.Link as={Link} to="/home">Home</Nav.Link>
                         <Nav.Link as={Link} to="/product">Product</Nav.Link>
-                        <Nav.Link as={Link} to="/">About</Nav.Link>
+                        <Nav.Link as={Link} to="/about">About</Nav.Link>
                         <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
                     </Nav>
                     <div className='buttons'>
@@ -83,9 +85,11 @@ useEffect(() => {
              <Route path="/home" element={<Home data={data}/>}></Route>
              <Route path="/product" element={<Product data={data}/>}></Route>
              <Route path="/product/:id" element={<Products/>}></Route>
+             <Route path="/about" element={<About/>}></Route>
              <Route path="/contact" element={<Footer/>}></Route>
              <Route path="/cart" element={<Cart/>}></Route>
-             {/* <Route path="/login" element={<Login/>}></Route> */}
+              <Route path="/login" element={<Login/>}></Route>
+              <Route path="/register" element={<Register/>}></Route>
 
 
 
@@ -95,7 +99,7 @@ useEffect(() => {
      </div>
       
      </HashRouter>
-     </BrowserRouter>
+   
 
   );
 }

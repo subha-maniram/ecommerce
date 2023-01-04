@@ -84,7 +84,8 @@ export default function Home({ data }) {
                 </section>
                 <section>
                     <div className='col-12 mb-5 mt-5'>
-                        <h1 className='display-6 fw-bolder text-center'>Latest Product </h1>
+                        <h1 className='display-6 fw-bolder text-center'>Features Products </h1>
+                        <h5 className='display-10  text-center'>Summer Collection New Modern Design</h5>
                         <hr />
                     </div>
                     <div className='d-flex flex-wrap justify-content-evenly mx-4'>
